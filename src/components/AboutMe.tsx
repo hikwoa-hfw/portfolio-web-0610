@@ -1,26 +1,45 @@
 import Image from "next/image";
 import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const AboutMe = () => {
   return (
-    <div className="container mx-auto grid justify-center items-center py-24">
-      <div>
-        <h1 className="text-teal-700 text-4xl">
-          About Me
-        </h1>
-      </div>
-      <div className="grid grid-cols-3 my-14 gap-8">
-        <div className="relative h-[500px] w-full">
-          <Image src="/Hello.svg" alt="Me" fill objectFit="contain" />
-        </div>
-        <div className="col-span-2 flex items-center">
-          <p className="text-lg leading-relaxed">
-            As a Fullstack Web Developer, I am committed to building not just applications, but also strong, trust-based relationships with my clients and colleagues. My expertise in Next.js, Node.js, React.js, Express, HTML, CSS, JavaScript, TypeScript, and Docker allows me to deliver solutions that are both innovative and reliable. 🚀
-            <br /><br />
-            I believe in the power of solidarity and teamwork, always striving to support and uplift those I work with. 🤝 My loyalty to my projects and partners is unwavering, ensuring that I consistently deliver high-quality results with professionalism and integrity. 🔒
-            <br /><br />
-            I am dedicated to maintaining a high standard of excellence in every endeavor, and I am eager to collaborate with others who share these values. Together, we can achieve remarkable outcomes and drive success. 🌟 Let's build something exceptional together! 💡
-          </p>
+    <div className="Yellow">
+      <div className="container mx-auto grid justify-center items-center py-16 Yellow">
+          <h1 className="text-teal-700 text-4xl hidden">About Me</h1>
+        <div className="grid grid-cols-3 my-12 gap-8">
+          <div className="relative h-[640px] w-full">
+            <Image src="/Hello.svg" alt="Me" fill objectFit="contain" />
+          </div>
+          <div className="col-span-2 flex items-center ml-12">
+            <Card className="border-black rounded-2xl border-[3px] w-[830px] shadow-custom bg-[#fffcee] p-4">
+              <CardHeader>
+                <CardTitle className="text-teal-700 text-4xl font-bold">About Me</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-lg leading-relaxed">
+                  As a Fullstack Web Developer, I specialize in creating
+                  innovative and reliable solutions using Next.js, Node.js,
+                  React.js, and more. I am committed to building trust-based
+                  relationships with my clients and colleagues, ensuring
+                  high-quality results with professionalism and integrity. 🚀
+                  <br />
+                  <br />I believe in the power of teamwork and am dedicated to
+                  supporting and uplifting those I work with. My loyalty to
+                  projects and partners is unwavering, and I am eager to
+                  collaborate with others who share these values. Together, we
+                  can achieve remarkable outcomes and drive success. 🌟
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </div>

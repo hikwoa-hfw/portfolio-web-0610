@@ -1,39 +1,61 @@
 import Image from "next/image";
 import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const HeroSection = () => {
   return (
-    <section className="bg-yellow-100 py-24">
+    <section className="py-20 Yellow">
       <div className="container mx-auto grid grid-cols-3 justify-center items-center">
-        <div className="flex justify-center flex-col col-span-2 gap-y-2 ml-8">
-          <p>
-            &lt;h2 className="text-lg"&gt;
-            <span className="text-lg"> Hello, I am Hibban </span>
-            &lt;/h2&gt;
-          </p>
-          <p>
-            &lt;h1 className="text-teal-700 text-3xl"&gt;
-            <span className="text-teal-700 text-3xl">
-              {" "}
-              Fullstack Web Developer{" "}
-            </span>
-            &lt;/h1&gt;
-          </p>
-          <div>
-            <p className="my-2">&lt;p className="text-lg"&gt;</p>
-            <p className="text-lg max-w-[940px] my-1">
-              I'm a passionate Fullstack Web Developer specializing in building
-              fast, scalable, and user-friendly applications. Let's collaborate
-              and bring your ideas to life! 🚀
-            </p>
-            <p>&lt;/p&gt;</p>
+        <div className="flex col-span-2 gap-y-2 ml-8 h-full">
+          <div className="mx-auto">
+            <Card className="w-[540px] border-[3px] border-black rounded-2xl shadow-custom bg-[#fffcee]">
+              <CardHeader className="gap-y-2 m-2">
+                <CardContent>
+                  <Image
+                    src="/HeroImage.png"
+                    alt="thumbnail"
+                    width={320}
+                    height={80}
+                    className="mx-auto border-[2px] border-black rounded-2xl"
+                  />
+                </CardContent>
+                <CardTitle className="text-xl font-semibold">
+                  Hello, I am Hibban
+                </CardTitle>
+                <CardDescription className="text-teal-700 text-4xl font-bold">
+                  Fullstack Web Developer
+                </CardDescription>
+                <CardDescription className="max-w-[940px] text-black text-lg">
+                  I'm a passionate Fullstack Web Developer specializing in
+                  building fast, scalable, and user-friendly applications. Let's
+                  collaborate and bring your ideas to life! 🚀
+                </CardDescription>
+                <CardContent >
+                  <div className="flex justify-center mt-4" >
+                    <button className="rounded-lg hover:bg-teal-700 mx-auto hover:text-[#fffcee] p-2 border-teal-700 border-[2px] transition-colors duration-150 hover:border-teal-700 w-[200px]">
+                      Reach Out!
+                    </button>
+                  </div>
+                </CardContent>
+              </CardHeader>
+            </Card>
           </div>
-          <button className="rounded-lg hover:bg-teal-600 hover:text-black p-2 border-teal-700 border-[2px] hover:border-teal-600 w-[200px] mt-8">
-          Reach Out!
-        </button>
         </div>
         <div className="relative h-[500px] w-full">
-          <Image src="/Computer.svg" fill alt="me" objectFit="contain" className="bg-transparent"/>
+          <Image
+            src="/Computer.svg"
+            fill
+            alt="me"
+            objectFit="contain"
+            className="bg-transparent"
+          />
         </div>
       </div>
     </section>

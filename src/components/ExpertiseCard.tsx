@@ -12,22 +12,22 @@ interface Props {
 const ExpertiseCard2: FC<Props> = ({ icon, title, job, link }) => {
   return (
     <div>
-      <Card className="border-black rounded-2xl border-[3px] p-4 shadow-custom pb-8">
+      <Card className="rounded-2xl border-[3px] border-black p-4 pb-8 shadow-custom">
         <CardHeader>
           <CardTitle>
-            <span className="text-teal-700 text-4xl hover:underline-offset-2 hover:underline cursor-pointer font-bold">
+            <span className="cursor-pointer text-4xl font-bold text-teal-700 hover:underline hover:underline-offset-2">
               {job}
             </span>
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-3 gap-4 h-[220px] justify-items-center">
+          <div className="grid h-[220px] grid-cols-3 justify-items-center gap-4">
             {icon.map((iconElement, index) => (
               <Link href={link[index]} legacyBehavior passHref key={index}>
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex p-3 flex-col items-center m-2 hover:border-teal-700 hover:border-[2px] hover:rounded-lg hover:shadow-green transition-all duration-150 max-h-[102px] text-5xl"
+                  className="m-2 flex max-h-[102px] flex-col items-center p-3 text-5xl transition-all duration-150 hover:rounded-lg hover:border-[2px] hover:border-teal-700 hover:shadow-green"
                 >
                   {iconElement}
                   <span className="mt-2 text-base">{title[index]}</span>

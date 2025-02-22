@@ -57,10 +57,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        custom: "10px 10px black",
-		green: "10px 10px #0f766e"
+        custom: "10px 12px black",
+        green: "10px 12px #0f766e",
       },
-	  
     },
   },
   plugins: [require("tailwindcss-animate")],

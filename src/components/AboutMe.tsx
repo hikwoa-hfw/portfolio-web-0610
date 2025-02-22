@@ -12,30 +12,35 @@ import {
 const AboutMe = () => {
   return (
     <div className="Yellow">
-      <div className="container mx-auto grid justify-center items-center py-16 Yellow">
-          <h1 className="text-teal-700 text-4xl hidden">About Me</h1>
-        <div className="grid grid-cols-3 my-12 gap-8">
+      <div className="Yellow container mx-auto grid items-center justify-center py-16">
+        <h1 className="hidden text-4xl text-teal-700">About Me</h1>
+        <div className="my-12 grid grid-cols-3 gap-8">
           <div className="relative h-[640px] w-full">
             <Image src="/Hello.svg" alt="Me" fill objectFit="contain" />
           </div>
-          <div className="col-span-2 flex items-center ml-12">
-            <Card className="border-black rounded-2xl border-[3px] w-[830px] shadow-custom bg-[#fffcee] p-4">
+          <div className="col-span-2 ml-12 flex items-center">
+            <Card className="w-[830px] rounded-2xl border-[3px] border-black bg-[#fffcee] p-4 shadow-custom">
               <CardHeader>
-                <CardTitle className="text-teal-700 text-4xl font-bold">About Me</CardTitle>
+                <CardTitle className="cursor-pointer text-4xl text-teal-700 transition-all duration-150 hover:underline hover:underline-offset-auto">
+                  About Me
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-lg leading-relaxed">
-                  As a Fullstack Web Developer, I specialize in creating
-                  innovative and reliable solutions using Next.js, Node.js,
-                  React.js, and more. I am committed to building trust-based
-                  relationships with my clients and colleagues, ensuring
-                  high-quality results with professionalism and integrity. 🚀
+                  As a passionate Fullstack Web Developer, I have a strong
+                  background in creating dynamic and efficient web applications.
+                  My journey in web development has equipped me with expertise
+                  in JavaScript, React, Node.js, and TypeScript, along with
+                  tools like Docker and Git. I am committed to delivering
+                  high-quality work with a focus on timeliness, attention to
+                  detail, and clear communication. 🚀
                   <br />
-                  <br />I believe in the power of teamwork and am dedicated to
-                  supporting and uplifting those I work with. My loyalty to
-                  projects and partners is unwavering, and I am eager to
-                  collaborate with others who share these values. Together, we
-                  can achieve remarkable outcomes and drive success. 🌟
+                  <br />I believe in the power of collaboration and am dedicated
+                  to building trust-based relationships with clients and
+                  colleagues. My loyalty to projects and partners is unwavering,
+                  and I strive to support and uplift those I work with.
+                  Together, we can achieve remarkable outcomes and drive success
+                  with professionalism and integrity. 🤝🌟
                 </p>
               </CardContent>
             </Card>

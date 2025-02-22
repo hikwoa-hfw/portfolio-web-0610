@@ -27,20 +27,20 @@ const linkData = [
 
 const Navbar = () => {
   return (
-    <nav className="bg-[#fffcee] border-b-[3px] border-teal-700">
-      <div className="container flex mx-auto justify-between items-center py-4">
-        <div className="items-center font-mono flex text-2xl justify-center bg-[#fffcee]">
-          <span className="text-teal-700 font-bold text-3xl mr-2 cursor-pointer">
+    <nav className="border-b-[3px] border-teal-700 bg-[#fffcee]">
+      <div className="container mx-auto flex items-center justify-between py-4">
+        <div className="flex items-center justify-center bg-[#fffcee] font-mono text-2xl">
+          <span className="mr-2 cursor-pointer text-3xl font-bold text-teal-700">
             &lt;/&gt;
           </span>
-          <p className="hover:underline-offset-2 hover:underline cursor-pointer">
+          <p className="cursor-pointer hover:underline hover:underline-offset-2">
             Hibban Faruq
           </p>
         </div>
         <div className="flex justify-between gap-4">
           {data.map((item, index) => (
             <button
-              className="rounded-lg hover:bg-teal-700 hover:text-[#fffcee] p-2 border-[2px] border-teal-700 transition-colors duration-150"
+              className="rounded-lg border-[2px] border-teal-700 p-2 transition-colors duration-150 hover:bg-teal-700 hover:text-[#fffcee]"
               key={index}
             >
               {item.title}
@@ -49,13 +49,13 @@ const Navbar = () => {
         </div>
         <Dialog>
           <DialogTrigger asChild>
-            <button className="rounded-lg hover:bg-teal-700 hover:text-[#fffcee] p-2 border-teal-700 border-[2px] transition-colors duration-150">
+            <button className="rounded-lg border-[2px] border-teal-700 p-2 px-4 transition-colors duration-150 hover:bg-teal-700 hover:text-[#fffcee]">
               Reach Out!
             </button>
           </DialogTrigger>
           <DialogContent className="w-[425px]">
             <DialogHeader>
-              <DialogTitle className="text-teal-700 text-2xl font-bold">
+              <DialogTitle className="text-2xl font-bold text-teal-700">
                 Contact Me
               </DialogTitle>
               <DialogDescription className="text-gray-700">
@@ -69,18 +69,20 @@ const Navbar = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex p-3 items-center m-2 transition-all duration-150 max-h-[102px] hover:border-teal-700 hover:border-[2px] hover:rounded-lg hover:shadow-green"
+                    className="m-2 flex max-h-[102px] items-center p-3 transition-all duration-150 hover:rounded-lg hover:border-[2px] hover:border-teal-700 hover:shadow-green"
                   >
                     <span className="text-lg">{item.icon}</span>
-                    <span className="ml-2 hover:underline hover:underline-offset-auto">{item.title}</span>
+                    <span className="ml-2 hover:underline hover:underline-offset-auto">
+                      {item.title}
+                    </span>
                   </a>
                 </Link>
               ))}
             </div>
             <div className="grid gap-4">
-              <div className="flex gap-2 text-lg items-center">
+              <div className="flex items-center gap-2 text-lg">
                 <p>or </p>
-                <h1 className="text-teal-700 text-2xl font-bold"> Mail Me</h1>
+                <h1 className="text-2xl font-bold text-teal-700"> Mail Me</h1>
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="subject" className="text-right">
@@ -103,7 +105,7 @@ const Navbar = () => {
                 />
               </div>
               <div className="mx-24">
-                <button className="rounded-lg hover:bg-teal-700 hover:text-[#fffcee] p-2 border-teal-700 border-[2px] transition-colors duration-150">
+                <button className="rounded-lg border-[2px] border-teal-700 p-2 transition-colors duration-150 hover:bg-teal-700 hover:text-[#fffcee]">
                   Send Email!
                 </button>
               </div>

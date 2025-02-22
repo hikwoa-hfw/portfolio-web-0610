@@ -1,13 +1,14 @@
-import Image from "next/image";
-import React from "react";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
+import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import {
   Dialog,
   DialogContent,
@@ -16,56 +17,55 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
-import Link from "next/link";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
-import { Input } from "./ui/input";
 
 const linkData = [
-  { title: "Instagram", link: "https://instagram.com", icon: <FaInstagram /> },
+  { title: "Twitter", link: "https://x.com", icon: <FaXTwitter /> },
   { title: "LinkedIn", link: "https://linkedin.com", icon: <FaLinkedin /> },
+  { title: "GitHub", link: "https://github.com", icon: <FaGithub /> },
 ];
 
 const HeroSection = () => {
   return (
-    <section className="py-20 Yellow">
-      <div className="container mx-auto grid grid-cols-3 justify-center items-center">
-        <div className="flex col-span-2 ml-8 h-full">
+    <section className="Yellow py-20">
+      <div className="container mx-auto grid grid-cols-3 items-center justify-center">
+        <div className="col-span-2 ml-8 flex h-full">
           <div className="mx-auto">
-            <Card className="w-[540px] border-[3px] border-black rounded-2xl shadow-custom bg-[#fffcee]">
-              <CardHeader className="gap-y-2 ml-3">
+            <Card className="w-[540px] rounded-2xl border-[3px] border-black bg-[#fffcee] shadow-custom">
+              <CardHeader className="ml-3 gap-y-2">
                 <CardContent>
                   <Image
                     src="/HeroImage.png"
                     alt="thumbnail"
                     width={320}
                     height={80}
-                    className="mx-auto border-[2px] border-black rounded-2xl"
+                    className="mx-auto rounded-2xl border-[2px] border-black"
                   />
                 </CardContent>
                 <CardTitle className="text-xl font-semibold">
                   Hello, I am Hibban
                 </CardTitle>
-                <CardDescription className="text-teal-700 text-4xl font-bold">
+                <CardDescription className="cursor-pointer text-4xl font-bold text-teal-700 transition-all duration-150 hover:underline hover:underline-offset-auto">
                   Fullstack Web Developer
                 </CardDescription>
-                <CardDescription className="max-w-[940px] text-black text-lg">
+                <CardDescription className="max-w-[940px] text-lg text-black">
                   I'm a passionate Fullstack Web Developer specializing in
                   building fast, scalable, and user-friendly applications. Let's
                   collaborate and bring your ideas to life! 🚀
                 </CardDescription>
                 <CardContent>
-                  <div className="flex justify-center mt-4">
+                  <div className="mt-4 flex justify-center">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <button className="rounded-lg text-lg hover:bg-teal-700 hover:text-[#fffcee] p-2 border-teal-700 border-[2px] transition-colors duration-150">
+                        <button className="rounded-lg border-[2px] border-teal-700 p-2 px-4 text-lg transition-colors duration-150 hover:bg-teal-700 hover:text-[#fffcee]">
                           Reach Out!
                         </button>
                       </DialogTrigger>
                       <DialogContent className="w-[425px]">
                         <DialogHeader>
-                          <DialogTitle className="text-teal-700 text-2xl font-bold">
+                          <DialogTitle className="text-2xl font-bold text-teal-700">
                             Contact Me
                           </DialogTitle>
                           <DialogDescription className="text-gray-700">
@@ -84,7 +84,7 @@ const HeroSection = () => {
                               <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex p-3 items-center m-2 transition-all duration-150 max-h-[102px] hover:border-teal-700 hover:border-[2px] hover:rounded-lg hover:shadow-green"
+                                className="m-2 flex max-h-[102px] items-center p-3 transition-all duration-150 hover:rounded-lg hover:border-[2px] hover:border-teal-700 hover:shadow-green"
                               >
                                 <span className="text-lg">{item.icon}</span>
                                 <span className="ml-2 hover:underline hover:underline-offset-auto">
@@ -95,9 +95,9 @@ const HeroSection = () => {
                           ))}
                         </div>
                         <div className="grid gap-4">
-                          <div className="flex gap-2 text-lg items-center">
+                          <div className="flex items-center gap-2 text-lg">
                             <p>or </p>
-                            <h1 className="text-teal-700 text-2xl font-bold">
+                            <h1 className="text-2xl font-bold text-teal-700">
                               {" "}
                               Mail Me
                             </h1>
@@ -123,7 +123,7 @@ const HeroSection = () => {
                             />
                           </div>
                           <div className="mx-24">
-                            <button className="rounded-lg hover:bg-teal-700 hover:text-[#fffcee] p-2 border-teal-700 border-[2px] transition-colors duration-150">
+                            <button className="rounded-lg border-[2px] border-teal-700 p-2 transition-colors duration-150 hover:bg-teal-700 hover:text-[#fffcee]">
                               Send Email!
                             </button>
                           </div>

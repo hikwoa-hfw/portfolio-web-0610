@@ -1,7 +1,7 @@
 import AboutMe from "@/components/AboutMe";
 import Expertise from "@/components/Expertise";
 import HeroSection from "@/components/HeroSection";
-import Image from "next/image";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -9,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <AboutMe />
       <Expertise />
+      <Testimonials/>
     </div>
   );
 }

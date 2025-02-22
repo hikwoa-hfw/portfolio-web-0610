@@ -1,15 +1,15 @@
 import Image from "next/image";
 import {
-    BiLogoPostgresql,
-    BiLogoTypescript,
-    BiSolidFileJson,
+  BiLogoPostgresql,
+  BiLogoTypescript,
+  BiSolidFileJson,
 } from "react-icons/bi";
 import {
-    FaCss3Alt,
-    FaDocker,
-    FaGitAlt,
-    FaHtml5,
-    FaReact
+  FaCss3Alt,
+  FaDocker,
+  FaGitAlt,
+  FaHtml5,
+  FaReact,
 } from "react-icons/fa";
 import { RiJavascriptFill, RiNextjsFill } from "react-icons/ri";
 import { SiPrisma } from "react-icons/si";
@@ -97,13 +97,13 @@ const backEnd = [
 const Expertise = () => {
   return (
     <div className="Yellow h-screen">
-      <div className="container mx-auto py-16 Yellow">
-        <div className="text-teal-700 text-4xl font-semibold rounded-xl p-8 my-8 max-w-[240px] border-[3px] bg-[#fffcee] border-black shadow-custom">
-          <p className="hover:underline hover:underline-offset-auto cursor-pointer transition-all duration-150">
-          Expertise
-            </p>
+      <div className="Yellow container mx-auto py-16">
+        <div className="my-8 max-w-[240px] rounded-xl border-[3px] border-black bg-[#fffcee] p-8 text-4xl font-semibold text-teal-700 shadow-custom">
+          <p className="cursor-pointer transition-all duration-150 hover:underline hover:underline-offset-auto">
+            Expertise
+          </p>
         </div>
-        <div className="grid grid-cols-3 gap-16 justify-center items-center ">
+        <div className="grid grid-cols-3 items-center justify-center gap-16">
           <ExpertiseCard2
             job="Front-End"
             icon={frontEnd.map((card) => card.icon)}

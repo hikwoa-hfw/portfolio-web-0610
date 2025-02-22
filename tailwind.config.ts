@@ -58,6 +58,7 @@ export default {
       },
       boxShadow: {
         custom: "10px 10px black",
+		green: "10px 10px #0f766e"
       },
 	  
     },

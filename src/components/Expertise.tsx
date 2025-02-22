@@ -99,7 +99,9 @@ const Expertise = () => {
     <div className="Yellow h-screen">
       <div className="container mx-auto py-16 Yellow">
         <div className="text-teal-700 text-4xl font-semibold rounded-xl p-8 my-8 max-w-[240px] border-[3px] bg-[#fffcee] border-black shadow-custom">
+          <p className="hover:underline hover:underline-offset-auto cursor-pointer transition-all duration-150">
           Expertise
+            </p>
         </div>
         <div className="grid grid-cols-3 gap-16 justify-center items-center ">
           <ExpertiseCard2

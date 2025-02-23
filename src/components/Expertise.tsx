@@ -98,8 +98,8 @@ const Expertise = () => {
   return (
     <div className="Yellow h-screen">
       <div className="Yellow container mx-auto py-16">
-        <div className="my-8 max-w-[240px] rounded-xl border-[3px] border-black bg-[#fffcee] p-8 text-4xl font-semibold text-teal-700 shadow-custom">
-          <p className="cursor-pointer transition-all duration-150 hover:underline hover:underline-offset-auto">
+        <div className="flex my-8 max-w-[320px] rounded-xl border-[3px] border-black bg-[#fffcee] p-8 text-4xl font-semibold text-teal-700 shadow-custom">
+          <p className="cursor-pointer transition-all mx-auto duration-150 hover:underline hover:underline-offset-auto">
             Expertise
           </p>
         </div>

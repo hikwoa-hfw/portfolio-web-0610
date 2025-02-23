@@ -1,13 +1,10 @@
-import Image from "next/image";
-import React from "react";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  CardTitle
+} from "@/components/ui/cardMod";
+import Image from "next/image";
 
 const AboutMe = () => {
   return (

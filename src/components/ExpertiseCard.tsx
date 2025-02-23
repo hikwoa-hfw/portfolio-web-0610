@@ -1,6 +1,6 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { FC } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/cardMod";
 
 interface Props {
   icon: any[];

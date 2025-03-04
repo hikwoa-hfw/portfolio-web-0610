@@ -15,6 +15,7 @@ import { RiJavascriptFill, RiNextjsFill } from "react-icons/ri";
 import { SiPrisma } from "react-icons/si";
 import ExpertiseCard2 from "./ExpertiseCard";
 
+
 const frontEnd = [
   {
     icon: <FaCss3Alt />,
@@ -96,14 +97,14 @@ const backEnd = [
 
 const Expertise = () => {
   return (
-    <div className="Yellow h-screen">
-      <div className="Yellow container mx-auto py-16">
-        <div className="flex my-8 max-w-[320px] rounded-xl border-[3px] border-black bg-[#fffcee] p-8 text-4xl font-semibold text-teal-700 shadow-custom">
+    <main className="yellow min-h-screen" id="expertise">
+      <div className="yellow container mx-auto py-16">
+        <div className="flex my-8 mx-auto lg:mx-8 max-w-[240px] lg:max-w-[320px] rounded-xl border-[3px] border-black bg-[#fffcee] p-4 lg:p-8 text-3xl lg:text-4xl font-semibold text-teal-700 shadow-custom">
           <p className="cursor-pointer transition-all mx-auto duration-150 hover:underline hover:underline-offset-auto">
             Expertise
           </p>
         </div>
-        <div className="grid grid-cols-3 items-center justify-center gap-16">
+        <div className="grid lg:grid-cols-3 items-center mx-8 justify-center gap-8 lg:gap-16">
           <ExpertiseCard2
             job="Front-End"
             icon={frontEnd.map((card) => card.icon)}
@@ -124,7 +125,7 @@ const Expertise = () => {
           />
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

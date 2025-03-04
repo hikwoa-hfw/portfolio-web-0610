@@ -6,7 +6,7 @@
     font-family: monospace;
 }
 
-.Yellow{
+.yellow{
     background-color: #F4D04E;
 }
 
@@ -86,3 +86,16 @@
     }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Untuk mengatur offset scroll ketika menggunakan navbar fixed/sticky */
+section {
+  scroll-margin-top: 80px; /* Sesuaikan dengan tinggi navbar Anda */
+}
+
+/* Atau lebih spesifik */
+#about {
+  scroll-margin-top: 80px;
+}

@@ -12,42 +12,42 @@ import { useState } from "react";
 
 const reviews = [
   {
-    name: "Saipul Jamil",
-    username: "Tech Lead Strategik Corp.",
-    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa aliquid, quod laborum quas nostrum veritatis non corrupti repudiandae repellendus maxime!",
-    img: "https://avatar.vercel.sh/saipul",
+  name: "Saipul Jamil",
+  username: "Tech Lead Strategik Corp.",
+  body: "I greatly admire this fullstack developer's expertise in building seamless, efficient applications that excel in every aspect.",
+  img: "https://avatar.vercel.sh/saipul",
   },
   {
-    name: "Ega Eripras",
-    username: "Project Manager Supajob",
-    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa aliquid, quod laborum quas nostrum veritatis non corrupti repudiandae repellendus maxime!",
-    img: "https://avatar.vercel.sh/ega",
+  name: "Ega Eripras",
+  username: "Project Manager Supajob",
+  body: "Working with this fullstack developer is consistently inspiring; they deliver innovative solutions that drive our projects forward effectively.",
+  img: "https://avatar.vercel.sh/ega",
   },
   {
-    name: "Haikal Abdurrahman",
-    username: "CEO Catify",
-    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa aliquid, quod laborum quas nostrum veritatis non corrupti repudiandae repellendus maxime!",
-    img: "https://avatar.vercel.sh/haikal",
+  name: "Haikal Abdurrahman",
+  username: "CEO Catify",
+  body: "This fullstack developer masterfully integrates front-end and back-end systems, resulting in robust, scalable, and dynamic applications always.",
+  img: "https://avatar.vercel.sh/haikal",
   },
   {
-    name: "Gigih Saputra",
-    username: "CTO Catify",
-    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa aliquid, quod laborum quas nostrum veritatis non corrupti repudiandae repellendus maxime!",
-    img: "https://avatar.vercel.sh/gigih",
+  name: "Gigih Saputra",
+  username: "CTO Catify",
+  body: "Their fullstack skills blend creativity and practicality, consistently producing reliable, high-performing solutions that exceed expectations.",
+  img: "https://avatar.vercel.sh/gigih",
   },
   {
-    name: "Huda Kurniawan",
-    username: "CEO Supajob",
-    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa aliquid, quod laborum quas nostrum veritatis non corrupti repudiandae repellendus maxime!",
-    img: "https://avatar.vercel.sh/huda",
+  name: "Huda Kurniawan",
+  username: "CEO Supajob",
+  body: "I trust this fullstack developer's technical expertise and innovative approach, making every project run smoothly and brilliantly.",
+  img: "https://avatar.vercel.sh/huda",
   },
   {
-    name: "Calvin Xander",
-    username: "CTO Supajob",
-    body: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa aliquid, quod laborum quas nostrum veritatis non corrupti repudiandae repellendus maxime!",
-    img: "https://avatar.vercel.sh/calvin",
+  name: "Calvin Xander",
+  username: "CTO Supajob",
+  body: "As a top fullstack developer, they deliver projects that are not only functional, but also beautifully designed and efficient.",
+  img: "https://avatar.vercel.sh/calvin",
   },
-];
+  ];
 
 const firstRow = reviews.slice(0, Math.ceil(reviews.length / 3));
 const secondRow = reviews.slice(
@@ -164,7 +164,7 @@ export function Marquee3D() {
             <DialogTitle className="text-2xl font-bold text-teal-700">
               {selectedReview?.name}
             </DialogTitle>
-            <DialogDescription className="text-gray-700">
+            <div className="text-gray-700">
               <div className="flex items-center gap-2">
                 <img
                   className="rounded-full"
@@ -182,15 +182,15 @@ export function Marquee3D() {
               <div>
                 <p className="mt-2 text-sm">{selectedReview?.body}</p>
               </div>
-            </DialogDescription>
+            </div>
           </DialogHeader>
         </DialogContent>
       </Dialog>
 
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-[#F4D04E]"></div>
+      {/* <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-[#F4D04E]"></div>
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#F4D04E]"></div>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#F4D04E]"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#F4D04E]"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#F4D04E]"></div> */}
     </div>
   );
 }

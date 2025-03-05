@@ -68,7 +68,7 @@ const Navbar = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {data.map((item, index) => (
-                  <Link href={`#${item.id}`} key={index} passHref>
+                  <Link href={`#${item.id}`} key={index} passHref className="cursor-pointer">
                     <DropdownMenuItem>{item.title}</DropdownMenuItem>
                   </Link>
                 ))}

@@ -34,33 +34,38 @@ const data = [
 
 const Experience = () => {
   return (
-    <main className="yellow py-16" id="experience">
-      <div className="container mx-auto items-center justify-center">
-        <div className="lg:my-8 mx-auto lg:mx-8 flex max-w-[240px] lg:max-w-[320px] rounded-xl border-[3px] border-black bg-[#fffcee] p-4 lg:p-8 text-3xl lg:text-4xl font-semibold text-teal-700 shadow-custom">
-          <p className="mx-auto cursor-pointer transition-all duration-150 hover:underline hover:underline-offset-auto">
-            Experience
-          </p>
+    <main className="yellow py-8 sm:py-12 lg:py-16" id="experience">
+      <div className="container mx-auto px-4 sm:px-6">
+        {/* Title Section */}
+        <div className="mx-auto flex justify-center">
+          <div className="rounded-lg sm:rounded-xl border-2 sm:border-[3px] border-black bg-[#fffcee] p-3 sm:p-4 lg:p-8 shadow-custom">
+            <p className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-teal-700 cursor-pointer transition-all duration-150 hover:underline hover:underline-offset-auto">
+              Experience
+            </p>
+          </div>
         </div>
-        <div className="mt-6 flex">
-          <div className="mt-6 flex lg:flex-row flex-col gap-8 lg:gap-12 lg:mx-8 mx-auto">
+
+        {/* Cards Section */}
+        <div className="mt-6 sm:mt-8 lg:mt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {data.map((value, index) => (
               <Card
-                className="lg:w-full min-w-[320px] lg:max-w-[480px] rounded-2xl border-[3px] border-black bg-[#fffcee] shadow-custom"
+                className="w-full rounded-xl sm:rounded-2xl border-2 sm:border-[3px] border-black bg-[#fffcee] shadow-custom"
                 key={index}
               >
-                <CardHeader className="ml-3 gap-y-2">
-                  <CardTitle className="text-2xl lg:text-4xl font-bold text-teal-700 transition-all duration-150 ">
-                    <p className="hover:underline hover:underline-offset-auto lg:max-w-[440px] cursor-pointer">
-                    {value.title}
-                      </p>
+                <CardHeader className="space-y-2 p-4 sm:p-6">
+                  <CardTitle className="text-xl sm:text-2xl lg:text-3xl font-bold text-teal-700 transition-all duration-150">
+                    <p className="hover:underline hover:underline-offset-auto cursor-pointer line-clamp-2">
+                      {value.title}
+                    </p>
                   </CardTitle>
-                  <CardDescription className="text-sm lg:text-base">
+                  <CardDescription className="text-xs sm:text-sm lg:text-base">
                     {value.years}
                   </CardDescription>
-                  <CardTitle className="lg:text-2xl text-xl font-semibold">
+                  <CardTitle className="text-lg sm:text-xl lg:text-2xl font-semibold">
                     {value.company}
                   </CardTitle>
-                  <CardDescription className="lg:text-lg text-black">
+                  <CardDescription className="text-sm sm:text-base lg:text-lg text-black">
                     {value.description}
                   </CardDescription>
                 </CardHeader>

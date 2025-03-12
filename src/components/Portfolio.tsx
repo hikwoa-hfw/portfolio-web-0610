@@ -36,7 +36,7 @@ const datas = [
 
 const Portfolio: FC = () => {
   return (
-    <main className="yellow min-h-screen py-8 sm:py-12 lg:py-16" id="portfolio">
+    <main className="yellow py-8 sm:py-12 lg:py-16" id="portfolio">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Title Section */}
         <div className="mb-8 flex justify-center sm:mb-12">
@@ -48,7 +48,7 @@ const Portfolio: FC = () => {
         </div>
 
         {/* Card Section */}
-        <div className="flex justify-center gap-12 px-4 sm:px-6 lg:px-8">
+        <div className="grid place-items-center grid-cols-1 lg:flex lg:justify-center gap-12 px-4 sm:px-6 lg:px-8">
           {portfolioData.map((data, index) => (
             <Card className="w-full max-w-[320px] rounded-lg border-2 border-black bg-[#fffcee] shadow-custom sm:max-w-[600px] sm:rounded-xl sm:border-[3px] lg:max-w-[840px] lg:rounded-2xl" key={index}>
               <CardHeader className="space-y-4 p-4 sm:p-6">

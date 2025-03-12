@@ -115,7 +115,7 @@ const backEnd = [
 ];
 const Expertise = () => {
   return (
-    <main className="yellow min-h-screen py-8 sm:py-12 lg:py-16" id="expertise">
+    <main className="yellow py-8 sm:py-12 lg:py-16" id="expertise">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Title Section */}
         <div className="mb-8 flex justify-center sm:mb-12">

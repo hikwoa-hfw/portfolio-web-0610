@@ -5,7 +5,7 @@ import { MarqueeDemo } from "./ui/marqueehorizontal";
 
 const Testimonials = () => {
   return (
-    <main className="yellow min-h-screen py-8 sm:py-12 lg:py-16" id="testimonials">
+    <main className="yellow py-8 sm:py-12 lg:py-16" id="testimonials">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Title Section */}
         <div className="flex justify-center mb-8 sm:mb-12">

@@ -29,7 +29,7 @@ const linkData = [
 
 const HeroSection = () => {
   return (
-    <main className="yellow min-h-screen py-4 sm:py-6 lg:py-8" id="home">
+    <main className="yellow py-4 sm:py-6 lg:py-8" id="home">
       <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 items-center justify-center gap-8 lg:grid-cols-3">
         <div className="flex h-full lg:col-span-2">
           <div className="w-full max-w-[540px] mx-auto">

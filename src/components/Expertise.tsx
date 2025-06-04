@@ -54,21 +54,21 @@ const devTools = [
     title: "Git",
     link: "https://git-scm.com/",
   },
-  {
-    icon: (
-      <div className="relative h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
-        <Image
-          src="/deepseek.svg"
-          alt="deepseek"
-          fill
-          className="object-contain"
-          sizes="(max-width: 640px) 32px, (max-width: 1024px) 40px, 48px"
-        />
-      </div>
-    ),
-    title: "DeepSeek",
-    link: "https://deepseek.com/",
-  },
+  // {
+  //   icon: (
+  //     <div className="relative h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12">
+  //       <Image
+  //         src="/deepseek.svg"
+  //         alt="deepseek"
+  //         fill
+  //         className="object-contain"
+  //         sizes="(max-width: 640px) 32px, (max-width: 1024px) 40px, 48px"
+  //       />
+  //     </div>
+  //   ),
+  //   title: "DeepSeek",
+  //   link: "https://deepseek.com/",
+  // },
 ];
 
 const backEnd = [

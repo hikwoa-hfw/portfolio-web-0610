@@ -58,7 +58,7 @@ export default {
   		},
   		boxShadow: {
   			custom: '10px 12px black',
-  			green: '10px 12px #0f766e'
+  			green: '10px 11px #0f766e'
   		},
   		keyframes: {
   			marquee: {

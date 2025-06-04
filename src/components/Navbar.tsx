@@ -8,7 +8,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Link from "next/link";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -24,20 +24,21 @@ const data = [
   { title: "About Me", id: "about" },
   { title: "Expertise", id: "expertise" },
   { title: "Portfolio", id: "portfolio" },
-  { title: "Experience", id: "experience" },
+  // { title: "Experience", id: "experience" },
   { title: "Testimonials", id: "testimonials" },
 ];
 
 const linkData = [
-  { title: "Instagram", link: "https://instagram.com", icon: <FaInstagram /> },
+  // { title: "Instagram", link: "https://instagram.com", icon: <FaInstagram /> },
   { title: "LinkedIn", link: "https://linkedin.com", icon: <FaLinkedin /> },
+  {title: "GitHub", link: "https://github.com/hikwoa-hfw", icon: <FaGithub/>}
 ];
 
 const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b-[3px] border-teal-700 bg-[#fffcee]">
       <div className="container mx-auto flex items-center justify-between py-4">
-        <Link href="#home" passHref className="mx-4">
+        <Link href="#" passHref className="mx-4">
           <div className="flex items-center justify-center bg-[#fffcee] font-mono text-lg lg:text-2xl">
             <span className="mr-2 cursor-pointer text-xl font-bold text-teal-700 lg:text-3xl">
               &lt;/&gt;
@@ -68,7 +69,12 @@ const Navbar = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 {data.map((item, index) => (
-                  <Link href={`#${item.id}`} key={index} passHref className="cursor-pointer">
+                  <Link
+                    href={`#${item.id}`}
+                    key={index}
+                    passHref
+                    className="cursor-pointer"
+                  >
                     <DropdownMenuItem>{item.title}</DropdownMenuItem>
                   </Link>
                 ))}
@@ -108,35 +114,50 @@ const Navbar = () => {
                 ))}
               </div>
               <div className="grid gap-4">
-                <div className="flex items-center gap-2 text-lg">
-                  <p>or </p>
-                  <h1 className="text-2xl font-bold text-teal-700"> Mail Me</h1>
-                </div>
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="subject" className="text-right">
-                    Subject
-                  </Label>
-                  <Input
-                    id="subject"
-                    placeholder="Enter Your Subject"
-                    className="col-span-3"
-                  />
-                </div>
-                <div className="grid grid-cols-4 items-center gap-4">
-                  <Label htmlFor="message" className="text-right">
-                    Message
-                  </Label>
-                  <Textarea
-                    id="message"
-                    placeholder="Your Message"
-                    className="col-span-3 shadow-sm"
-                  />
-                </div>
-                <div className="mx-24">
-                  <button className="rounded-lg border-[2px] border-teal-700 p-2 transition-colors duration-150 hover:bg-teal-700 hover:text-[#fffcee]">
-                    Send Email!
-                  </button>
-                </div>
+                <form
+                  action="https://formspree.io/f/manjnyrz"
+                  method="POST"
+                  className="grid gap-4"
+                >
+                  {/* Email Input */}
+                  <div className="grid grid-cols-4 items-center gap-4">
+                    <label htmlFor="email" className="text-right">
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder="Enter Your Email"
+                      className="col-span-3 rounded border px-3 py-2"
+                      required
+                    />
+                  </div>
+
+                  {/* Message Input */}
+                  <div className="grid grid-cols-4 items-center gap-4">
+                    <label htmlFor="message" className="text-right">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Your Message"
+                      className="col-span-3 rounded border px-3 py-2 shadow-sm"
+                      required
+                    />
+                  </div>
+
+                  {/* Submit Button */}
+                  <div className="mx-24">
+                    <button
+                      type="submit"
+                      className="rounded-lg border-[2px] border-teal-700 p-2 transition-colors duration-150 hover:bg-teal-700 hover:text-[#fffcee]"
+                    >
+                      Send Email!
+                    </button>
+                  </div>
+                </form>
               </div>
             </DialogContent>
           </Dialog>

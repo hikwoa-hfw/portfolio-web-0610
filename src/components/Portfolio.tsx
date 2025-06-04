@@ -50,7 +50,7 @@ const Portfolio: FC = () => {
         {/* Card Section */}
         <div className="grid place-items-center grid-cols-1 lg:flex lg:justify-center gap-12 px-4 sm:px-6 lg:px-8">
           {portfolioData.map((data, index) => (
-            <Card className="w-full max-w-[320px] rounded-lg border-2 border-black bg-[#fffcee] shadow-custom sm:max-w-[600px] sm:rounded-xl sm:border-[3px] lg:max-w-[840px] lg:rounded-2xl" key={index}>
+            <Card className="w-full max-w-[320px] rounded-lg border-2 h-[440px] border-black bg-[#fffcee] shadow-custom sm:max-w-[600px] sm:rounded-xl sm:border-[3px] lg:max-w-[840px] lg:rounded-2xl" key={index}>
               <CardHeader className="space-y-4 p-4 sm:p-6">
                 <CardContent className="p-0">
                   <div className="relative aspect-video w-full">
@@ -100,7 +100,7 @@ const Portfolio: FC = () => {
                         key={index}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group flex items-center p-2 text-3xl transition-all duration-150 hover:rounded-lg hover:border-2 hover:border-teal-700 hover:shadow-green sm:p-3 sm:text-4xl lg:text-5xl"
+                        className="group flex items-center p-2 text-3xl transition-all duration-150 hover:rounded-lg hover:border-2 hover:border-teal-700 hover:shadow-green sm:p-2 sm:text-4xl lg:text-5xl"
                       >
                         <div className="transition-transform duration-200 group-hover:scale-110">
                           {icon.icon}

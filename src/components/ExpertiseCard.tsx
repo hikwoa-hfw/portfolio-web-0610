@@ -30,7 +30,7 @@ const ExpertiseCard2: FC<Props> = ({ icon, title, job, link }) => {
                   className="m-2 flex max-h-[102px] flex-col items-center p-3 text-3xl lg:text-5xl transition-all duration-150 hover:rounded-lg hover:border-[2px] hover:border-teal-700 hover:shadow-green"
                 >
                   {iconElement}
-                  <span className="mt-2 text-base">{title[index]}</span>
+                  <span className="mt-2 text-sm">{title[index]}</span>
                 </a>
               </Link>
             ))}

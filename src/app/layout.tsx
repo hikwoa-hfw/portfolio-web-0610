@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   keywords: [
     "Hibban Faruq Wiratama",
     "Hibban",
+    "Hibban Faruq", 
+    "Hibban Faruq Wiratama, S.Pi.",
+    "Hibban Portfolio",
+    "Hibban Web Developer",
+    "Hibban Fullstack Developer",
     "Fullstack Developer",
     "Web Developer",
     "React Developer",

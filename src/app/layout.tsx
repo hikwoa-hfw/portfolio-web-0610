@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import StructuredData from "@/components/StructuredData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,17 +45,9 @@ export const metadata: Metadata = {
     title: "Hibban Faruq Wiratama | Fullstack Web Developer",
     description: "Passionate Fullstack Web Developer specializing in building fast, scalable, and user-friendly web applications.",
     siteName: "Hibban Faruq Wiratama Portfolio",
-    // images: [
-    //   {
-    //     url: "/og-image.jpg", // Buat image ini (1200x630px)
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Hibban Faruq Wiratama - Fullstack Web Developer",
-    //   },
-    // ],
   },
 
-   robots: {
+  robots: {
     index: true,
     follow: true,
     googleBot: {
@@ -66,9 +59,8 @@ export const metadata: Metadata = {
     },
   },
 
-  // Verification (opsional, untuk Google Search Console)
   verification: {
-      google: "8dJCcfYQ_K_OKMO9C6oAjB3CBnKVkmP4USG0KEeGVBM",
+    google: "8dJCcfYQ_K_OKMO9C6oAjB3CBnKVkmP4USG0KEeGVBM",
   },
 };
 
@@ -79,28 +71,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Hibban Faruq Wiratama",
-              jobTitle: "Fullstack Web Developer",
-              description: "Passionate Fullstack Web Developer specializing in building fast, scalable, and user-friendly web applications.",
-              url: "https://hibban-personal.vercel.app/", 
-              sameAs: [
-                "https://github.com/hikwoa-hfw", 
-                "https://linkedin.com/in/hibbanfaruqwiratamaa", 
-              ],
-            }),
-          }}
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <StructuredData /> 
         <Navbar />
         {children}
       </body>

@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import StructuredData from "@/components/StructuredData";
+import Script from "next/script";
+import AnalyticsListener from "@/components/AnalyticsListener";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,6 +15,8 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const googleVerifyMeta = process.env.GOOGLE_VERIFY_META;
 
 export const metadata: Metadata = {
   title: "Hibban Faruq Wiratama | Fullstack Web Developer",
@@ -60,7 +64,7 @@ export const metadata: Metadata = {
   },
 
   verification: {
-    google: "8dJCcfYQ_K_OKMO9C6oAjB3CBnKVkmP4USG0KEeGVBM",
+    google: googleVerifyMeta,
   },
 };
 
@@ -69,6 +73,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const NEXT_PUBLIC_GA_ID = process.env.NEXT_PUBLIC_GA_ID;
   return (
     <html lang="en">
       <body
@@ -77,6 +82,23 @@ export default function RootLayout({
         <StructuredData /> 
         <Navbar />
         {children}
+        <AnalyticsListener />
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${NEXT_PUBLIC_GA_ID}`}
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${NEXT_PUBLIC_GA_ID}');
+            `,
+          }}
+        />
       </body>
     </html>
   );

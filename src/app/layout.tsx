@@ -4,8 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import StructuredData from "@/components/StructuredData";
 import Script from "next/script";
-import AnalyticsListener from "@/components/AnalyticsListener";
 import { Suspense } from "react";
+import dynamic from "next/dynamic";
+import AnalyticsListener from "@/components/AnalyticsListener";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

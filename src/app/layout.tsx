@@ -1,12 +1,12 @@
+import AnalyticsListener from "@/components/AnalyticsListener";
+import Navbar from "@/components/Navbar";
+import SectionTracker from "@/components/SectionTracker";
+import StructuredData from "@/components/StructuredData";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/Navbar";
-import StructuredData from "@/components/StructuredData";
 import Script from "next/script";
 import { Suspense } from "react";
-import dynamic from "next/dynamic";
-import AnalyticsListener from "@/components/AnalyticsListener";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -103,6 +103,7 @@ export default function RootLayout({
             `,
           }}
         />
+        <SectionTracker />
       </body>
     </html>
   );

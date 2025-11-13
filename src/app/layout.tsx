@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import StructuredData from "@/components/StructuredData";
 import Script from "next/script";
 import AnalyticsListener from "@/components/AnalyticsListener";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -82,7 +83,9 @@ export default function RootLayout({
         <StructuredData /> 
         <Navbar />
         {children}
-        <AnalyticsListener />
+        <Suspense fallback={null}>
+          <AnalyticsListener />
+        </Suspense>
         <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${NEXT_PUBLIC_GA_ID}`}

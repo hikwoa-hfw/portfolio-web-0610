@@ -6,7 +6,7 @@ import { event } from "@/lib/gtag";
 export default function SectionTracker() {
   useEffect(() => {
     const viewedSections = new Set<string>();
-    const sections = ["home", "about", "portfolio", "testimonials"];
+    const sections = ["home", "about", "portfolio", "expertise", "testimonials"];
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -24,7 +24,7 @@ export default function SectionTracker() {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.3 }
     );
 
     sections.forEach((id) => {

@@ -21,6 +21,7 @@ const geistMono = Geist_Mono({
 const googleVerifyMeta = process.env.GOOGLE_VERIFY_META;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://hibban-personal.vercel.app"),
   title: "Hibban Faruq Wiratama | Fullstack Web Developer",
   description: "Hibban Faruq Wiratama - Passionate Fullstack Web Developer specializing in building fast, scalable, and user-friendly web applications using modern technologies like React, Next.js, and Node.js.",
   keywords: [
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     url: "https://hibban-personal.vercel.app",
     title: "Hibban Faruq Wiratama | Fullstack Web Developer",
     description: "Passionate Fullstack Web Developer specializing in building fast, scalable, and user-friendly web applications.",
-    siteName: "Hibban Faruq Wiratama Portfolio",
+    siteName: "Hibban Portfolio",
   },
 
   robots: {
